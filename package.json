@@ -1,0 +1,27 @@
+{
+  "name": "showgirls-of-pakistan",
+  "version": "1.0.0",
+  "description": "interactive visual site to accompany showgirls of pak",
+  "scripts": {
+    "test": "test",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amad-a/showgirls-of-pakistan.git"
+  },
+  "author": "amad ansari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amad-a/showgirls-of-pakistan/issues"
+  },
+  "homepage": "https://github.com/amad-a/showgirls-of-pakistan#readme",
+  "dependencies": {
+    "@neodrag/vanilla": "^2.3.1",
+    "gsap": "^3.13.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}

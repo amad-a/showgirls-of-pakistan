@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>showgirls momi install</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://unpkg.com/@neodrag/vanilla@latest/dist/umd/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+</head>
+
+<style>
+    @font-face {
+        font-family: "LosAngeles";
+        /* A name for your custom font */
+        src: url("public/LosAngeles_14.ttf") format("truetype");
+        /* Path(s) to font files */
+        font-weight: normal;
+        /* Optional: define font weight */
+        font-style: normal;
+        /* Optional: define font style */
+        /* Other optional properties like font-display, unicode-range, etc. */
+    }
+
+    .draggable-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+    }
+
+    #container {
+        pointer-events: none;
+    }
+
+    .drag {
+        position: absolute;
+        pointer-events: auto;
+        z-index: 50;
+    }
+
+    .petal {
+        image-rendering: pixelated;
+
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-repeat: no-repeat;
+    }
+
+    #drag {
+        background-color: blue;
+        width: 200px;
+        height: 200px;
+        z-index: 50;
+    }
+
+    body {
+        background-image: url('public/starz.jpg');
+        image-rendering: pixelated;
+        background-blend-mode: lighten;
+        background-size: 200px;
+    }
+
+    body::before {
+        opacity: 30%;
+    }
+
+    html,
+    body,
+    #container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'LosAngeles';
+    }
+
+    .window-body {
+        margin: 0px
+    }
+
+    img {
+        width: 100%;
+    }
+
+
+
+    .title-bar-text {
+        font-family: 'LosAngeles';
+        font-family: sans-serif;
+    }
+</style>
+
+<body>
+
+
+    <div id="container">
+        <div class="window drag" id="drag" style="width: 300px; height: 300px">
+            <div class="title-bar">
+                <div class="title-bar-text">Mujra Nargis</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img src="public/gifs/random-adhi raati soti paye de lat heli ae   deedar new stage mujra 2018   pakistani stage mujra full hd [G-xmtHjQXWE].gif"
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        const dragInstance = new NeoDrag.Draggable(document.getElementById('drag'));
+        console.log('draggy', dragInstance);
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+        // a 1-11 b 1-10 c 1-8
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+
+        var falling = true;
+
+        TweenLite.set("#container", { perspective: 600 })
+        TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" })
+
+        var total = 100;
+        var container = document.getElementById("container"), w = window.innerWidth, h = window.innerHeight;
+
+        for (let i = 0; i < total; i++) {
+            var Div = document.createElement('div');
+            Div.style.backgroundImage = `url(public/showgirls-flowers/s-petal-${getRandomInt(29)}.gif)`;
+            Div.style.opacity = `${30 + getRandomInt(70)}%`;
+            Div.style.zIndex = `${getRandomInt(100)}`;
+            TweenLite.set(Div, { attr: { class: 'petal' }, x: R(0, w), y: R(-200, -150), z: R(-200, 200) });
+            container.appendChild(Div);
+            animm(Div);
+        }
+
+        function animm(elm) {
+            TweenMax.to(elm, R(6, 15), { y: h + 100, ease: Linear.easeNone, repeat: -1, delay: -15 });
+            TweenMax.to(elm, R(4, 8), { x: '+=100', rotationZ: R(0, 180), repeat: -1, yoyo: true, ease: Sine.easeInOut });
+            //TweenMax.to(elm, R(2, 8), { rotationX: R(0, 360), rotationY: R(0, 360), repeat: -1, yoyo: true, ease: Sine.easeInOut, delay: -5 });
+        };
+
+        function R(min, max) { return min + Math.random() * (max - min) };
+
+        let images = 
+        [
+            'public/gifs/random-DOODH MAKHNA DI PALI DEEDAR Lovely Vip Mujra Dance HD [ra9uP-1AHFQ].gif'
+            
+        ]
+
+    </script>
+    test
+</body>
+
+</html>
