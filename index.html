@@ -95,6 +95,24 @@
         width: 100%;
     }
 
+    @keyframes expandFromCenter {
+        0% {
+            transform: scale(0);
+            transform-origin: center center;
+        }
+
+        1% {
+            transform: scale(0);
+            transform-origin: center center;
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
 
 
     .title-bar-text {
@@ -137,6 +155,7 @@
     }
 
     .window {
+        animation: expandFromCenter 0.15s ease-out;
         box-shadow: inset -1px -1px #880e4f, inset 1px 1px #d81b60, inset -2px -2px #ad1457, inset 2px 2px #f48fb1, inset -3px -3px #c2185b, inset 3px 3px #e91e63;
     }
 </style>
@@ -241,7 +260,7 @@
             </div>
         </div>
 
-        <div class="window drag">
+        <!-- <div class="window drag">
             <div class="title-bar">
                 <div class="title-bar-text mujra-title"></div>
                 <div class="title-bar-controls">
@@ -263,7 +282,7 @@
             <div class="window-body">
                 <img class="mujra-gif" src="" />
             </div>
-        </div>
+        </div> -->
     </div>
 
     <script type="module">
@@ -283,7 +302,8 @@
         }
 
 
-        let zIndex = 10;
+        let zIndex = 1000000;
+        let lowestZindex = 1000000;
         const filenames = [
             {
                 file: 'random-ada ch sexy mujra ciros theatreRawalpindi [EvTPd400YPg]',
@@ -436,6 +456,13 @@
             return Math.floor(Math.random() * max);
         }
 
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min); // Ensure min is an integer
+            max = Math.floor(max); // Ensure max is an integer
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+
 
         // a 1-11 b 1-10 c 1-8
         const windowWidth = window.innerWidth;
@@ -444,12 +471,25 @@
         let mujraWindows = document.querySelectorAll('.drag');
 
         mujraWindows.forEach((element, i) => {
-            element.style.zIndex = 1;
+            element.style.zIndex = zIndex;
             element.style.translate = `${getRandomInt(window.innerWidth - 320)}px ${getRandomInt(window.innerHeight - 320)}px`;
+
+            element.querySelector('button').addEventListener("click", (event) => {
+                console.log('wirks');
+
+                lowestZindex--;
+                element.style.zIndex = lowestZindex;
+                // element.remove();
+                document.getElementById('container').appendChild(element);
+
+                element.style.translate = `${getRandomInt(window.innerWidth - 320)}px ${getRandomInt(window.innerHeight - 320)}px`;
+                element.querySelector('img').src = `public/gifs/${encodeURIComponent(filenames[getRandomInt(filenames.length - 1)].file)}.gif`;
+            })
 
             element.addEventListener("mousedown", (event) => {
                 console.log('t');
                 zIndex++;
+                lowestZindex--;
                 element.style.zIndex = zIndex;
             })
             new NeoDrag.Draggable(element, {
@@ -457,13 +497,12 @@
                 gpuAcceleration: false,
                 handle: '.title-bar',
                 bounds: 'parent',
-
             });
 
             getRandomInt(window.innerWidth - 320);
             element.style.top = getRandomInt(windowHeight - 274);
             let gif = element.querySelector('.mujra-gif');
-            gif.src = `public/gifs/${encodeURIComponent(randomMujra[i].file)}.gif`;
+            gif.src = `public/gifs/${encodeURIComponent(filenames[i].file)}.gif`;
         });
 
 
@@ -478,7 +517,7 @@
         for (let i = 0; i < total; i++) {
             var Div = document.createElement('div');
             Div.style.backgroundImage = `url(public/showgirls-flowers/s-petal-${getRandomInt(29)}.gif)`;
-            Div.style.opacity = `${30 + getRandomInt(70)}%`;
+            Div.style.opacity = `${60 + getRandomInt(40)}%`;
             Div.style.zIndex = `${getRandomInt(100)}`;
             TweenLite.set(Div, { attr: { class: 'petal' }, x: R(0, w), y: R(-200, -150), z: R(-200, 200) });
             container.appendChild(Div);
