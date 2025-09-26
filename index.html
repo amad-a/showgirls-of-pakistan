@@ -34,10 +34,21 @@
         pointer-events: none;
     }
 
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        pointer-events: none;
+        /* Also prevents right-click */
+    }
+
     .drag {
         position: absolute;
         pointer-events: auto;
         z-index: 50;
+        background-color: #f48fb1;
     }
 
     .petal {
@@ -50,9 +61,7 @@
     }
 
     #drag {
-        background-color: blue;
-        width: 200px;
-        height: 200px;
+        /* background-color: blue; */
         z-index: 50;
     }
 
@@ -74,6 +83,8 @@
         height: 100%;
         overflow: hidden;
         font-family: 'LosAngeles';
+        padding: 0px;
+        margin: 0px;
     }
 
     .window-body {
@@ -90,39 +101,373 @@
         font-family: 'LosAngeles';
         font-family: sans-serif;
     }
+
+    .title-bar {
+        /* Paler Rose Pink Gradient */
+        background: linear-gradient(180deg,
+                #ffb3d1,
+                #f48fb1 8%,
+                #f06292 40%,
+                #ec407a 88%,
+                #ec407a 93%,
+                #e91e63 95%,
+                #c2185b 96%,
+                #c2185b);
+
+        /* Complete CSS Rule with Rose Pink Theme */
+        font-family: Trebuchet MS;
+        background: linear-gradient(180deg,
+                #ffb3d1,
+                #f48fb1 8%,
+                #f06292 40%,
+                #ec407a 88%,
+                #ec407a 93%,
+                #e91e63 95%,
+                #c2185b 96%,
+                #c2185b);
+        padding: 3px 5px 3px 3px;
+        border-top: 1px solid #d81b60;
+        border-left: 1px solid #d81b60;
+        border-right: 1px solid #ad1457;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 7px;
+        font-size: 13px;
+        text-shadow: 1px 1px #b71c1c;
+        height: 21px;
+    }
+
+    .window {
+        box-shadow: inset -1px -1px #880e4f, inset 1px 1px #d81b60, inset -2px -2px #ad1457, inset 2px 2px #f48fb1, inset -3px -3px #c2185b, inset 3px 3px #e91e63;
+    }
 </style>
 
 <body>
 
 
     <div id="container">
-        <div class="window drag" id="drag" style="width: 300px; height: 300px">
+        <div class="window drag">
             <div class="title-bar">
-                <div class="title-bar-text">Mujra Nargis</div>
+                <div class="title-bar-text mujra-title"></div>
                 <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
                     <button aria-label="Close"></button>
                 </div>
             </div>
             <div class="window-body">
-                <img src="public/gifs/random-adhi raati soti paye de lat heli ae   deedar new stage mujra 2018   pakistani stage mujra full hd [G-xmtHjQXWE].gif"
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
 
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" draggable="false" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" />
+            </div>
+        </div>
+
+        <div class="window drag">
+            <div class="title-bar">
+                <div class="title-bar-text mujra-title"></div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <img class="mujra-gif" src="" />
             </div>
         </div>
     </div>
 
     <script type="module">
-        const dragInstance = new NeoDrag.Draggable(document.getElementById('drag'));
-        console.log('draggy', dragInstance);
+
+        function getRandomNonRepeatingElements(arr, n) {
+            // 1. Create a copy of the array
+            const shuffledArray = [...arr];
+
+            // 2. Shuffle the copied array using Fisher-Yates (Knuth) shuffle algorithm
+            for (let i = shuffledArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]; // Swap elements
+            }
+
+            // 3. Extract the first n elements
+            return shuffledArray.slice(0, n);
+        }
+
+
+        let zIndex = 10;
+        const filenames = [
+            {
+                file: 'random-ada ch sexy mujra ciros theatreRawalpindi [EvTPd400YPg]',
+                timestamp: '00:01:33',
+            },
+            {
+                file: 'random-Afreen Khan (Official Video) ｜ Chakh Le Angoor ｜ Music Masti ｜ New Song Best Dance Performance 2022 [vTDEHMdwfn8]',
+                timestamp: '00:00:54',
+            },
+            {
+                file: 'random-AFREEN MEDLEY   2020  PAKISTANI MUJRA DANCE   MUJRA MASTI [Vnos6W0oOxQ]',
+                timestamp: '00:03:39',
+            },
+            {
+                file: 'random-Afreen Pari Doodh Ban Jawan Gi Mujra ｜ Stage Dance - SMB [3qRdPggKo8o]',
+                timestamp: '00:03:21',
+            },
+            {
+                file: 'random-AGGAN LA KE SANU ｜ BEAUTIFUL STAGE DANCE - NASEEBO LAL PUNJABI SONG - SMB [7Wvsyquoy2I]',
+                timestamp: '00:02:26',
+            },
+            {
+                file: 'random-Aj raal ka guzara ga raat ta ahlla kara din na [ZtXIeLOtTj0]',
+                timestamp: '00:04:13',
+            },
+            {
+                file: 'random-Alishah Mujra - Bohe Barian (Old is Gold Mujra Dance) [Fen9nYnMfyI]',
+                timestamp: '00:04:11',
+            },
+            {
+                file: 'random-Aqsa Malik Nere AAA Zalima Vee [HDrVNS74QkQ]',
+                timestamp: '00:00:11',
+            },
+            {
+                file: 'random-Aqsa Malik New Punjabi Official Video Jan Jan [7FdLNxWF8vc]',
+                timestamp: '00:00:53',
+            },
+            {
+                file: 'random-Asha Ch Mujra - Teri Marzi Ay (Old z Gold Mujra Dance) [GOgAPsb_WxI]',
+                timestamp: '00:00:46',
+            },
+            {
+                file: 'random-Cho Ve Mainu Cho Olz z Gold Mujra [BRP8eHcBnnI]',
+                timestamp: '00:03:21',
+            },
+            {
+                file: 'random-Dil Se Dil ki Baat ｜ Punjabi stage Mujra ｜ Old is Gold Classic Mujra style (Unknown Artist) [C419pOlc36w]',
+                timestamp: '00:02:33',
+            },
+            {
+                file: 'random-DOODH MAKHNA DI PALI DEEDAR Lovely Vip Mujra Dance HD [ra9uP-1AHFQ]',
+                timestamp: '00:03:13',
+            },
+            {
+                file: 'random-FEROZA ALI STAGE PERFORMANCE PAA JAPHIYAN ｜ PUNJABI SONG NASEEBO LAL - SMB [ILApqP2j8CQ]',
+                timestamp: '00:03:48',
+            },
+            {
+                file: 'random-Gilli Ve Gilli Sari Main - Mujra Hi Mujra - Album 9 - Official Video [g733f__kWC4]',
+                timestamp: '00:02:25',
+            },
+            {
+                file: 'random-Jaan O Meri Jaan - Jaan ｜ Mehak Malik Bollywood Dance Performance 2022 #ShaheenStudio [F3N09fwCFqc]',
+                timestamp: '00:03:50',
+            },
+            {
+                file: 'random-Khushboo Hot Mujra Meri Galan Utte Old is Gold Mujra Dance [TKRq4L3kp9w]',
+                timestamp: '00:02:30',
+            },
+            {
+                file: 'random-Kismat Baig Private Hot  Mujra Sone Di Tavitri [eY3FRBFDDwY]',
+                timestamp: '00:02:53',
+            },
+            {
+                file: 'random-Long Nak Da II 0308-4867157 II Komal Rani & Zoya II Hadiali Program II New RA Studio [OFotrgxXf1s]',
+                timestamp: '00:03:55',
+            },
+            {
+                file: 'random-Mehak Noor (Official Video) ｜｜ Tauba Tauba Kara Diti Tu ｜｜ Stage Drama Song ｜ New Dance Performance [y53be9N1ErQ]',
+                timestamp: '00:04:41',
+            },
+            {
+                file: 'random-MERI GARAM JAWANI PUNJABI STAGE DANCE - KHUSHBOO KHAN PERFORMANCE, NASEEBO LAL SONG - SMB [Fnv2cK9Bfkk]',
+                timestamp: '00:01:45',
+            },
+            {
+                file: 'random-Nargis hor Peya (Old is Gold Mujra Dance) [W_Bq0rdmHIk]',
+                timestamp: '00:00:05',
+            },
+            {
+                file: 'random-Nargis Mujra- Asan Jag Nu Mana K (Old z Gold Mujra Dance) [D6MmXqEOV-M]',
+                timestamp: '00:00:36',
+            },
+            {
+                file: 'random-Nida Ch Private Mujra Party (Old is Gold Mujra Dance) [gWAKxJIjYhs]',
+                timestamp: '00:04:11',
+            },
+            {
+                file: 'random-Nida Chaudhry Stage Dance ｜ Sheeeshe Sa Badan - Saira Naseem Punjabi Song ｜ SMB [e-djb5_aOj0]',
+                timestamp: '00:04:11',
+            },
+            {
+                file: 'random-Old Z Gold Mujra 33  Uff Toofani Raat We [vld6ec3ilOE]',
+                timestamp: '00:01:19',
+            },
+            {
+                file: 'random-rat noo niklan taarey [Du2WksfTOuo]',
+                timestamp: '00:04:02',
+            },
+            {
+                file: 'random-Shabnum Chauderi ｜ Stage Mujra ｜ Old is Gold ｜ Naseebo Lal Punjabi Song [qHTHGQ1eB04]',
+                timestamp: '00:00:22',
+            },
+            {
+                file: 'random-Shazia  choudhry  sialkot mujra [Tu3Y-bn9Fms]',
+                timestamp: '00:00:21',
+            },
+            {
+                file: 'random-SHEEZA BUTT PUNJABI STAGE DANCE HUSAN TERI KAMZORI ｜ NASEEBO LAL SONG - SMB [lvfV_cHY--I]',
+                timestamp: '00:03:02',
+            },
+            {
+                file: 'random-Tera ishq ve a pagal full hd mujra [kNJz2cEXPQ8]',
+                timestamp: '00:03:46',
+            },
+            {
+                file: 'random-Zara Akbar Mujra 2  Chan Chana Chan 2 [jTWoTPTiMbk]',
+                timestamp: '00:00:07',
+            },
+            {
+                file: 'random-Qayamat Qayamat ｜ Mehak Malik ｜ Bollywood Dance Performance ｜ #Shaheen_Studio [yPXksNqm8r0]',
+                timestamp: '00:02:58',
+            },
+            {
+                file: 'random-rat noo niklan taarey [Du2WksfTOuo]',
+                timestamp: '00:04:02',
+            },
+            {
+                file: 'random-Phullan Wali Kurti [877nPh-9P08]',
+                timestamp: '00:04:31',
+            },
+        ]
+
+
+        const randomMujra = getRandomNonRepeatingElements(filenames, 10);
+
+        // const dragInstances = new NeoDrag.Draggable(document.querySelectorAll('.drag'));
+        // console.log('draggy', dragInstance);
         function getRandomInt(max) {
             return Math.floor(Math.random() * max);
         }
+
+
         // a 1-11 b 1-10 c 1-8
         const windowWidth = window.innerWidth;
         const windowHeight = window.innerHeight;
 
-        var falling = true;
+        let mujraWindows = document.querySelectorAll('.drag');
+
+        mujraWindows.forEach((element, i) => {
+            element.style.zIndex = 1;
+            element.style.translate = `${getRandomInt(window.innerWidth - 320)}px ${getRandomInt(window.innerHeight - 320)}px`;
+
+            element.addEventListener("mousedown", (event) => {
+                console.log('t');
+                zIndex++;
+                element.style.zIndex = zIndex;
+            })
+            new NeoDrag.Draggable(element, {
+                legacyTranslate: true,
+                gpuAcceleration: false,
+                handle: '.title-bar',
+                bounds: 'parent',
+
+            });
+
+            getRandomInt(window.innerWidth - 320);
+            element.style.top = getRandomInt(windowHeight - 274);
+            let gif = element.querySelector('.mujra-gif');
+            gif.src = `public/gifs/${encodeURIComponent(randomMujra[i].file)}.gif`;
+        });
+
+
+        let falling = true;
 
         TweenLite.set("#container", { perspective: 600 })
         TweenLite.set("img", { xPercent: "-50%", yPercent: "-50%" })
@@ -148,11 +493,11 @@
 
         function R(min, max) { return min + Math.random() * (max - min) };
 
-        let images = 
-        [
-            'public/gifs/random-DOODH MAKHNA DI PALI DEEDAR Lovely Vip Mujra Dance HD [ra9uP-1AHFQ].gif'
-            
-        ]
+        let images =
+            [
+                'public/gifs/random-DOODH MAKHNA DI PALI DEEDAR Lovely Vip Mujra Dance HD [ra9uP-1AHFQ].gif'
+
+            ]
 
     </script>
     test
