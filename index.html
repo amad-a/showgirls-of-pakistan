@@ -521,8 +521,8 @@
         for (let i = 0; i < total; i++) {
             var Div = document.createElement('div');
             Div.style.backgroundImage = `url(public/showgirls-flowers/s-petal-${getRandomInt(29)}.gif)`;
-            Div.style.opacity = `${60 + getRandomInt(40)}%`;
-            Div.style.zIndex = `${getRandomInt(100)}`;
+            Div.style.opacity = `${75 + getRandomInt(25)}%`;
+            Div.style.zIndex = `${getRandomIntInclusive(800000, 1200000)}`;
             TweenLite.set(Div, { attr: { class: 'petal' }, x: R(0, w), y: R(-200, -150), z: R(-200, 200) });
             container.appendChild(Div);
             animm(Div);
